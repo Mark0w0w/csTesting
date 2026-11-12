@@ -1,0 +1,16 @@
+name: CI basico
+on:
+  push:
+    branches: ["main"]
+jobs:
+  saludo:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Descargar el codigo del repositorio
+        uses: actions/checkout@v4
+
+      - name: Mostrar informacion del entorno
+        run: |
+          echo "hola, este es mi workflow de CI"
+          echo "Rama: ${{ github.ref_name }}"
+          echo "Commit: ${{ github.sha }}"
