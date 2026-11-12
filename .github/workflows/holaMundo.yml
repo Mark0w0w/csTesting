@@ -1,0 +1,10 @@
+name: holaMunadi
+on: [push]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: action/checkout@v3
+      - name: Ejecutar un script
+        run: echo 'hola Github Actions'
+        
